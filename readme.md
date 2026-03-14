@@ -8,10 +8,10 @@ Place the `cpl-generator` directory at the root of your competitive programming 
 
 ```text
 your-competitive-programming-library/
-├── Math/
+├── math/
 │   ├── gcd.cpp
 │   └── sieve.cpp
-├── Graphs/
+├── graphs/
 │   ├── dijkstra.cpp
 │   └── dfs.cpp
 └── cpl-generator/          <-- Drop the generator here
