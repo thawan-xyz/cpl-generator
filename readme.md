@@ -1,4 +1,4 @@
-# Competitive Programming Library
+# CPL Generator
 
 A Python utility for generating a structured PDF document from your C++ Competitive Programming Library.
 
