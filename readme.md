@@ -1,17 +1,17 @@
 # CPL Generator
 
-A Python tool to generate a PDF from your C++ Competitive Programming Library.
+A Python utility for generating a structured PDF document from your C++ Competitive Programming Library.
 
-## 📂 Project Structure
+## Project Structure
 
-Drop the `cpl-generator` folder directly into the root of your competitive programming repository. The script will recursively scan the parent directory for all `.cpp` files.
+Place the `cpl-generator` directory at the root of your competitive programming repository. The script will recursively scan the parent directory to locate and include all `.cpp` files.
 
 ```text
-your-cp-library/
-├── Math/
+your-competitive-programming-library/
+├── math/
 │   ├── gcd.cpp
 │   └── sieve.cpp
-├── Graphs/
+├── graphs/
 │   ├── dijkstra.cpp
 │   └── dfs.cpp
 └── cpl-generator/          <-- Drop the generator here
@@ -20,14 +20,14 @@ your-cp-library/
     └── icon.png            <-- Your team/university logo
 ```
 
-## ⚙️ Setup & Installation
+## Setup and Installation
 
-**1. Navigate to the generator folder:**
+**1. Navigate to the generator directory:**
 ```bash
-cd your-cp-library/cpl-generator
+cd your-competitive-programming-library/cpl-generator
 ```
 
-**2. Create and activate a Virtual Environment:**
+**2. Create and activate a virtual environment:**
 ```bash
 python3 -m venv env
 source env/bin/activate
@@ -38,9 +38,9 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-## 🛠️ Configuration
+## Configuration
 
-Open the `generator.py` file and update the `user_info` dictionary at the bottom of the script with your personal details:
+Open `generator.py` and update the `user_info` dictionary at the bottom of the script with your personal details:
 
 ```python
 if __name__ == '__main__':
@@ -49,17 +49,21 @@ if __name__ == '__main__':
         user_info = {
             'name': 'YOUR NAME',        
             'team': 'YOUR TEAM',        
-            'icon_path': 'icon.png'     # Set to None if you don't have a logo
+            'icon_path': 'icon.png'     # Set to None if you do not have a logo
         }
         generate_pdf(lib_data, user_info)
 ```
 
-## 🚀 Usage
+## Usage
 
-Run the script from inside the `cpl-generator` folder:
+Execute the script from within the `cpl-generator` directory:
 
 ```bash
 python generator.py
 ```
 
-A file named `library.pdf` will be generated in the same folder.
+The output file `library.pdf` will be generated in the current directory.
+
+## Credits
+
+AI Assistance: Google Gemini
