@@ -63,7 +63,7 @@ An example of the final output is already included in the folder as `library.pdf
 To generate a new PDF with your updated code, execute the script from within the `cpl-generator` directory:
 
 ```bash
-python generator.py
+python3 generator.py
 ```
 
 The output file `library.pdf` will be overwritten or generated in the current directory.
