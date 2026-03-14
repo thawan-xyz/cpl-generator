@@ -1,4 +1,4 @@
-# CPL Generator
+# Competitive Programming Library
 
 A Python utility for generating a structured PDF document from your C++ Competitive Programming Library.
 
@@ -8,16 +8,17 @@ Place the `cpl-generator` directory at the root of your competitive programming 
 
 ```text
 your-competitive-programming-library/
-├── math/
+├── Math/
 │   ├── gcd.cpp
 │   └── sieve.cpp
-├── graphs/
+├── Graphs/
 │   ├── dijkstra.cpp
 │   └── dfs.cpp
 └── cpl-generator/          <-- Drop the generator here
     ├── generator.py
     ├── requirements.txt
-    └── icon.png            <-- Your team/university logo
+    ├── icon.png            <-- Your team logo
+    └── library.pdf         <-- Example output file
 ```
 
 ## Setup and Installation
@@ -48,7 +49,8 @@ if __name__ == '__main__':
     if lib_data:
         user_info = {
             'name': 'YOUR NAME',        
-            'team': 'YOUR TEAM',        
+            'team': 'YOUR TEAM',
+            'date': '2026-03-14',
             'icon_path': 'icon.png'     # Set to None if you do not have a logo
         }
         generate_pdf(lib_data, user_info)
@@ -56,13 +58,15 @@ if __name__ == '__main__':
 
 ## Usage
 
-Execute the script from within the `cpl-generator` directory:
+An example of the final output is already included in the folder as `library.pdf`. 
+
+To generate a new PDF with your updated code, execute the script from within the `cpl-generator` directory:
 
 ```bash
 python generator.py
 ```
 
-The output file `library.pdf` will be generated in the current directory.
+The output file `library.pdf` will be overwritten or generated in the current directory.
 
 ## Credits
 
