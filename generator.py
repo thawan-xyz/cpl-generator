@@ -125,6 +125,10 @@ def get_file_content(path):
 def write_colored_code(pdf, lexer, content):
     tokens = lexer.get_tokens(content)
     
+    # Font and spacing settings
+    code_size = 6.0
+    line_height = 3.0
+    
     # Token style mapping
     token_colors = {
         Token.Comment: (146, 131, 116),
@@ -146,16 +150,16 @@ def write_colored_code(pdf, lexer, content):
                 r, g, b = color
                 break
 
-        pdf.set_font(pdf.code_font, size=4.5)
+        pdf.set_font(pdf.code_font, size=code_size)
         pdf.set_text_color(r, g, b)
         
         parts = token_string.split('\n')
         for i, part in enumerate(parts):
             if part:
-                pdf.write(h=2.0, text=part)
+                pdf.write(h=line_height, text=part)
             if i < len(parts) - 1:
-                pdf.ln(2.0)
-                pdf.check_space(2.0)
+                pdf.ln(line_height)
+                pdf.check_space(line_height)
 
 # --- Modular Builders ---
 
@@ -241,7 +245,7 @@ def draw_algorithms(pdf, library_data, lexer, save_toc=False):
             write_colored_code(pdf, lexer, item['content'])
             
             if pdf.get_x() > pdf.l_margin + 0.1:
-                pdf.ln(2.0)
+                pdf.ln(3.0)
                 
             pdf.set_y(pdf.get_y() + 1)
             pdf.code_padding = 0
