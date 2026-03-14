@@ -1,6 +1,6 @@
 # CPL Generator
 
-A Python utility for generating a structured PDF document from your C++ Competitive Programming Library.
+A Python utility for generating a structured PDF document from your C++ competitive programming library.
 
 ## Project Structure
 
