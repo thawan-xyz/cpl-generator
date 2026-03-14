@@ -50,7 +50,6 @@ if __name__ == '__main__':
         user_info = {
             'name': 'YOUR NAME',        
             'team': 'YOUR TEAM',
-            'date': '2026-03-14',
             'icon_path': 'icon.png'     # Set to None if you do not have a logo
         }
         generate_pdf(lib_data, user_info)
